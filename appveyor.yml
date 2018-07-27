@@ -17,15 +17,17 @@ environment:
     ARCH: amd64
 
 install:
-- set PATH=%TEMP%\mingw64;%TEMP%\mingw32;%PATH%
+- set PATH=%TEMP%\mingw64\bin;%TEMP%\mingw32\bin;%PATH%
 - ps: |
     mkdir build
     cd build
     if ($env:GENERATOR -eq "MinGW Makefiles") {
       ../ci/setup-mingw.ps1
-      dir %TEMP%
-      dir %TEMP%\mingw64
-      dir %TEMP%\mingw32
+      dir $env:TEMP
+      dir ${env:TEMP}\mingw64
+      dir ${env:TEMP}\mingw64\bin
+      dir ${env:TEMP}\mingw32
+      dir ${env:TEMP}\mingw32\bin
     }
 
 build_script:
