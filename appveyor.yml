@@ -9,18 +9,6 @@ environment:
   GITTEST_INVASIVE_FS_SIZE: 1
 
   matrix:
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2013
-    CMAKE_OPTIONS: -G"Visual Studio 10 2010"
-    ARCH: x86
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2013
-    CMAKE_OPTIONS: -G"Visual Studio 10 2010 Win64"
-    ARCH: amd64
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    CMAKE_OPTIONS: -G"Visual Studio 14 2015"
-    ARCH: x86
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    CMAKE_OPTIONS: -G"Visual Studio 14 2015 Win64"
-    ARCH: amd64
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
     CMAKE_OPTIONS: -G"MinGW Makefiles"
     ARCH: x86
